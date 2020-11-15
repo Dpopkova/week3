@@ -4,7 +4,7 @@ require('http')
 .Server((req, res) => {
     const CORS = {
         'Access-Control-Allow-Origin': '*',
-        'X-Author' : 'itmo286135',
+        'X-Author' : 'itmo283528',
         'Content-Type': 'text/plain; charset=UTF-8',
         'Access-Control-Allow-Methods': 'GET,POST,DELETE',
         'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers'
