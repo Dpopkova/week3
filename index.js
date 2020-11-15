@@ -9,9 +9,7 @@ require('http')
         'Access-Control-Allow-Methods': 'GET,POST,DELETE',
         'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers'
     };  
-
     res.writeHead(200, CORS);
-
     if (req.url === '/login/') {
         return res.end('itmo283528');
       } 
@@ -24,19 +22,15 @@ require('http')
       } 
     else if (req.url === '/fetch/') {
         const filePath = path.join(__dirname, 'index.html');
-
         res.writeHead(200, {
           ...CORS,
           'Content-Type': 'text/html'
         });
-
         fs.readFile(filePath, (err, html) => {
           res.write(html);
           res.end();
         });
       } 
-    else {
-        res.end('itmo283528');
-      }
+    else { res.end('itmo283528'); }
 })
 .listen(process.env.PORT);
